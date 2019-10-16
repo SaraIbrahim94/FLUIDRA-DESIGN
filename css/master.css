@@ -1,0 +1,366 @@
+
+.dropdown-menu-button {
+  left: 380px;
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  display: block;
+  position: relative;
+  margin-top: 40px;
+  z-index: 100;
+  background: transparent;
+  border: 2px solid green;
+  box-sizing: content-box;
+  border-radius: 50%;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+  cursor: pointer;
+  overflow: hidden;
+}
+.dropdown-menu-button-open {
+  top: 50%;
+  margin-top: -1px;
+  left: 50%;
+  margin-left: -12px;
+}
+.dropdown-menu-button-open,
+.dropdown-menu-button-open::before,
+.dropdown-menu-button-open::after {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 4px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.dropdown-menu-button-open::before,
+.dropdown-menu-button-open::after {
+  left: 0;
+  content: "";
+}
+.dropdown-menu-button-open::before {
+  top: 6px;
+}
+.dropdown-menu-button-open::after {
+  bottom: 6px;
+}
+.dropdown-menu-button-close {
+  background: transparent;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.dropdown-menu-button-close::before {
+  -webkit-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg);
+}
+.dropdown-menu-button-close::after {
+  -webkit-transform: translateY(6px) rotate(-45deg);
+          transform: translateY(6px) rotate(-45deg);
+}
+.ham-menu {
+
+  position: absolute;
+  top: 42px;
+  left: 48px;
+  margin: auto;
+  max-width: 570px;
+  overflow: hidden;
+}
+.ham-menu ul {
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+  background-color: green;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.ham-menu.on ul {
+
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+.ham-menu ul {
+  font-size: 0;
+}
+.ham-menu ul li {
+  display: inline-block;
+}
+.ham-menu ul li:first-child .ham-menu ul li a {
+  padding-left: 30px;
+
+}
+.ham-menu ul li a {
+  padding: 15px;
+  display: block;
+  background-color: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  font-size: 13px;
+}
+
+#menu-navigation{
+  margin-top: 40px;
+  margin-left: 900px;
+}
+
+.menu-items{
+  margin-right:240px;
+  margin-top:40px;
+
+}
+.logo{
+  margin-left:70px;
+}
+.search-btn{
+  border:0px;
+  margin-top:10px;
+  background-color:rgba(0,128,0 ,0.35 );
+
+}
+
+/* display drop down menu  */
+#sidebarMenu {
+  height: 40%;
+  position: fixed;
+  left: 1550px;
+  width: 250px;
+  margin-top: 80px;
+  transform:  translateX(-250px);
+  transition: transform 150ms ease-in-out;
+  background: linear-gradient(180deg, gray 0%, green 50%);
+}
+
+.sidebarMenuInner {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li {
+  list-style: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.sidebarMenuInner li span {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.50);
+}
+
+.sidebarMenuInner li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+/*function that make box with menu items*/
+input[type="checkbox"]:checked ~ #sidebarMenu { transform: translateX(0); }
+
+input[type=checkbox] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+
+.sidebarIconToggle {
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+
+  top: 22px;
+  left: 15px;
+  height: 22px;
+  width: 22px;
+}
+
+.spinner {
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: black;
+  margin-left:1300px;
+  margin-top:30px;
+}
+
+.horizontal {
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 3px;
+}
+
+.diagonal.part-1 {
+  position: relative;
+  box-sizing: border-box;
+
+}
+
+.diagonal.part-2 {
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 3px;
+}
+/*header pargraph*/
+.head-parg{
+  text-align:center;
+  margin-top:130px;
+}
+.bold-line{
+  font-size:20px;
+}
+.header{
+  max-width:100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*bottom header contact list*/
+.bottom-bar{
+  margin-top:50px;
+  margin-bottom:70px;
+  text-align:center;
+}
+.det-box{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+width:10%;
+height:140px;
+background-color: whitte;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin-left:30px;
+}
+/*header section end */
+
+/*body section*/
+.left-side{
+  margin-top:60px;
+  margin-left:120px;
+  width:50%;
+
+}
+button{
+  width: 30%;
+}
+.see-more-btn{
+  background-color: #2C3E50;
+    color: white;
+
+    width:20%;
+    padding:10px 32px;
+  }
+  .see-more-btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.right-side{
+  margin-left:820px;
+  position:absolute;
+}
+.middle-body-part{
+  width:100%;
+  text-align:center;
+  margin-top:200px;
+  position:relative;
+}
+.txt-btn{
+  width:20%;
+  padding:40px 32px;
+  border:0px;
+  color: black;
+  background-color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+    opacity: 1;
+
+
+
+}
+.txt-btn:hover {
+
+  box-shadow: 0 12px 16px 0 rgba(171, 235, 198,0.24), 0 17px 50px 0 rgba(171, 235, 198,0.19);
+}
+/*blog section*/
+.blog-img{
+position:absolute;
+margin-top:120px;
+margin-left:270px;
+width:40%;
+}
+.small-bx{
+  position:absolute;
+  margin-top:120px;
+  margin-left:350px;
+color:white;
+font-size:20px;
+background-color:green;
+padding:15px 30px;
+}
+a{
+  color:blue;
+}
+.blog-list1{
+  margin-top:120px;
+  margin-left:900px;
+position:absolute;
+}
+.blog-list2{
+  margin-top:250px;
+  margin-left:900px;
+position:absolute;
+}
+.blog-list3{
+  margin-top:375px;
+  margin-left:900px;
+position:absolute;
+}
+li{
+  list-style-type:none;
+}
+
+.last-row{
+  margin-top:660px;
+}
+.last-row-image{
+  margin-left:250px;
+
+}
+
+.right-txt{
+  margin-top:150px;
+  position:absolute;
+  margin-left:690px;
+}
+/* Download Button */
+
+.download_button{
+  margin: 5% 3% 5% 0;
+
+}
+.img-phone{
+  position:absolute;
+}
+
+.page-footer{
+  background-color: #34495E;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+}
