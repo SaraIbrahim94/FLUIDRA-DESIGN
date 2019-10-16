@@ -1,366 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/master.css">
+<link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/fontawesome.css">
+    <title>FLUIDRA DESIGN</title>
 
-.dropdown-menu-button {
-  left: 380px;
-  width: 20px;
-  height: 20px;
-  padding: 8px;
-  display: block;
-  position: relative;
-  margin-top: 40px;
-  z-index: 100;
-  background: transparent;
-  border: 2px solid green;
-  box-sizing: content-box;
-  border-radius: 50%;
-  text-indent: 100%;
-  color: transparent;
-  white-space: nowrap;
-  cursor: pointer;
-  overflow: hidden;
-}
-.dropdown-menu-button-open {
-  top: 50%;
-  margin-top: -1px;
-  left: 50%;
-  margin-left: -12px;
-}
-.dropdown-menu-button-open,
-.dropdown-menu-button-open::before,
-.dropdown-menu-button-open::after {
-  position: absolute;
-  width: 24px;
-  height: 2px;
-  background: #fff;
-  border-radius: 4px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-}
-.dropdown-menu-button-open::before,
-.dropdown-menu-button-open::after {
-  left: 0;
-  content: "";
-}
-.dropdown-menu-button-open::before {
-  top: 6px;
-}
-.dropdown-menu-button-open::after {
-  bottom: 6px;
-}
-.dropdown-menu-button-close {
-  background: transparent;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-.dropdown-menu-button-close::before {
-  -webkit-transform: translateY(-6px) rotate(45deg);
-          transform: translateY(-6px) rotate(45deg);
-}
-.dropdown-menu-button-close::after {
-  -webkit-transform: translateY(6px) rotate(-45deg);
-          transform: translateY(6px) rotate(-45deg);
-}
-.ham-menu {
+  </head>
 
-  position: absolute;
-  top: 42px;
-  left: 48px;
-  margin: auto;
-  max-width: 570px;
-  overflow: hidden;
-}
-.ham-menu ul {
-  -webkit-transform: translateX(110%);
-          transform: translateX(110%);
-  background-color: green;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-.ham-menu.on ul {
+  <body>
+    <!-- Header Section -->
 
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-}
-.ham-menu ul {
-  font-size: 0;
-}
-.ham-menu ul li {
-  display: inline-block;
-}
-.ham-menu ul li:first-child .ham-menu ul li a {
-  padding-left: 30px;
+    <div class="header">
 
-}
-.ham-menu ul li a {
-  padding: 15px;
-  display: block;
-  background-color: transparent;
-  color: #fff;
-  text-transform: uppercase;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  font-size: 13px;
-}
 
-#menu-navigation{
-  margin-top: 40px;
-  margin-left: 900px;
-}
 
-.menu-items{
-  margin-right:240px;
-  margin-top:40px;
+    <nav style="background:
+      linear-gradient(
+        rgba(0,128,0 ,0.35 ),
+        rgba(0, 128, 0, 0.35)
+      ),url(images/backgrn.jpg);" class="nav-header navbar navbar-default">
+      <div class="logo">
 
-}
-.logo{
-  margin-left:70px;
-}
-.search-btn{
-  border:0px;
-  margin-top:10px;
-  background-color:rgba(0,128,0 ,0.35 );
 
-}
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" style="display: inline-block;">
+        <span style="display: inline-block;">FLUIDRA DESIGN</span>
+      </a>
 
-/* display drop down menu  */
-#sidebarMenu {
-  height: 40%;
-  position: fixed;
-  left: 1550px;
-  width: 250px;
-  margin-top: 80px;
-  transform:  translateX(-250px);
-  transition: transform 150ms ease-in-out;
-  background: linear-gradient(180deg, gray 0%, green 50%);
-}
+      </div>
+      <ul class="nav navbar-nav navbar-right menu-items">
+      <li ><a href="#">ABOUT</a></li>
+      <li><a href="#">SERVICES</a></li>
+      <li><a href="#">PORTFOLIO</a></li>
+      <li><button class="search-btn" type="button" name="button"><i class=" fa fa-search"></i></li></button>
+    </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent1">
 
-.sidebarMenuInner {
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
-}
+    <!-- drop-down menu -->
+    <button id="dropdown-menu" data-toggle="menu-navigation" class="pull-right dropdown-menu-button"><span class="dropdown-menu-button-open">Menu</span></button>
+<nav id="menu-navigation" class="pull-right ham-menu">
+  <ul class="menu pull-right">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">DESIGNs</a></li>
+    <li><a href="#">PRICING</a></li>
+    <li><a href="#">CATALOG</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
 
-.sidebarMenuInner li {
-  list-style: none;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 20px;
-  cursor: pointer;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
-}
+    <!-- drop-down menu -->
 
-.sidebarMenuInner li span {
-  display: block;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.50);
-}
 
-.sidebarMenuInner li a {
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  text-decoration: none;
-}
-/*function that make box with menu items*/
-input[type="checkbox"]:checked ~ #sidebarMenu { transform: translateX(0); }
+  </div>
+  <!--bottom of cover -->
+  <div class ="head-parg">
 
-input[type=checkbox] {
-  transition: all 0.3s;
-  box-sizing: border-box;
-  display: none;
-}
+  <p >
+  <span class="bold-line"><strong>  Lorem ipsum dolor sit amet</strong></span><br /><br>
+  Proin bibendum placerat libero a portitor. Donec vestibulum at augue venenatis<br />
+  aliquam. Donec dolor elit, lacinia nec purus eget, fringilla fringilla massa.<br /><br />
+  Phasellus congue metus vel lorem faucibus, eget vulputate elit iaculis.<br />
+    </p>
 
-.sidebarIconToggle {
-  box-sizing: border-box;
-  cursor: pointer;
-  position: absolute;
-  z-index: 99;
+    </div>
+    <div class="bottom-bar">
 
-  top: 22px;
-  left: 15px;
-  height: 22px;
-  width: 22px;
-}
+    <button class="det-box " style='font-size:24px'> <i class="far fa-comments"></i><br/>Chat</i></button>
+    <button class="det-box " style='font-size:24px'> <i class="fas fa-phone-volume"></i><br/>Call</i></button>
+    <button class="det-box "  style='font-size:24px'> <i class="fas fa-envelope"></i><br/>Email</i></button>
+    <button class="det-box" style='font-size:24px'> <i class="fas fa-home"></i><br/>Address</i></button>
 
-.spinner {
-  box-sizing: border-box;
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  background-color: black;
-  margin-left:1300px;
-  margin-top:30px;
-}
+    <!--bottom of cover -->
 
-.horizontal {
-  box-sizing: border-box;
-  position: relative;
-  margin-top: 3px;
-}
+  </div>
+    </nav>
+      </div>
+<!--header section end-->
 
-.diagonal.part-1 {
-  position: relative;
-  box-sizing: border-box;
+<!--First part of the body -->
+<div class="middle-section">
+  <!--First part of the body -->
 
-}
+  <div class="left-side">
+    <img class="right-side" src="images/mob-img.png" alt="">
 
-.diagonal.part-2 {
-  box-sizing: border-box;
-  position: relative;
-  margin-top: 3px;
-}
-/*header pargraph*/
-.head-parg{
-  text-align:center;
-  margin-top:130px;
-}
-.bold-line{
-  font-size:20px;
-}
-.header{
-  max-width:100%;
-  height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-/*bottom header contact list*/
-.bottom-bar{
-  margin-top:50px;
-  margin-bottom:70px;
-  text-align:center;
-}
-.det-box{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-width:10%;
-height:140px;
-background-color: whitte;
-  border: none;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  margin-left:30px;
-}
-/*header section end */
+    <p>
+<h1>Lorem ipsum dolor sit amet,<br>consectetur adipiscing elit.<br><br></h1>
+      Proin bibendum placerat libero a porttitor. Donec vestibulum at augue venenatis aliquam. Donce elite,<br>
+      Proin bibendum placerat libero a porttitor. Donec vestibulum at augue venenatis aliquam. Donce elite,<br>
+      Proin bibendum placerat.<br><br>
+      Proin bibendum placerat libero a portitor. Donec vestibulum at augue venenatis<br />
+      aliquam. Donec dolor elit, lacinia nec purus eget, fringilla fringilla massa.<br />
+      Phasellus congue metus vel lorem faucibus, eget vulputate elit iaculis.<br /><br>
 
-/*body section*/
-.left-side{
-  margin-top:60px;
-  margin-left:120px;
-  width:50%;
+    </p>
 
-}
-button{
-  width: 30%;
-}
-.see-more-btn{
-  background-color: #2C3E50;
-    color: white;
+<button class="see-more-btn" type="button" name="button">see more</button>
 
-    width:20%;
-    padding:10px 32px;
+  </div>
+
+  <!--Second part of the body -->
+
+<div class="middle-body-part">
+  <p ><h1>Lorem ipsum dolor sit amet</h1><br>
+    Proin bibendum placerat libero ap orttitor. Donec vestibulum at augue venenatis aliquam <br>
+    Donec dolor elit, lacinia nec placerat libero ap orttitor. Donec dapibus pulvinar <br>
+    posuere. Ut at est nulla.
+  </p>
+
+    <div id = "thetext"></div>
+      <button class="txt-btn" id="first" onclick = "DisplayText(first)"><i class="fas fa-unlock-alt"></i></button>
+      <button  class="txt-btn" id="second" onclick = "DisplayText(second)"><i class="far fa-heart"></i></button>
+      <button  class="txt-btn" id="third" onclick = "DisplayText(third)"><i class="far fa-circle"></i></button>
+<hr>
+      <p id="ShowText"></p>
+  </div>
+
+<!--blog section-->
+
+
+    <div class="blog-sec">
+      <img class="blog-img" src="images/blog-img.jpg" alt="tree">
+
+      <p class="small-bx">integer portitor, <br>metus eu autctor <br>consectuter <br><br>  <a href="#">read more</a></p>
+      <ul class="blogs">
+        <li class="blog-list1"><img src="images/blog-cycle-img.jpg" alt="">
+              <a href="#">Integer portittor, metus eu  auctor consectutr</a>
+        </li>
+        <li class="blog-list2"><img src="images/blog-nature-img.jpg" alt="">
+              <a href="#">Integer portittor, metus eu  auctor consectutr</a>
+        </li>
+        <li class="blog-list3"><img src="images/blog-meeting-img.jpg" alt="">
+              <a href="#">Integer portittor, metus eu auctor consectutr</a>
+        </li>
+      </ul>
+    </div>
+
+<!--download apps-->
+<div class="last-row">
+  <div class="img-phone">
+    <img class="last-row-image" src="images/mob-half-img.png" alt="iphone">
+  </div>
+        <div  class= "right-txt">
+          <h1>Download Now</h1>
+          <p>Lorem ipsm proin bibendum placerat libero ap orttitor. Donec vestibulum at augue venenatis aliquam <br>
+          Donec dolor elit, lacinia nec placerat libero ap orttitor. Donec dapibus pulvinar <br>
+          posuere. Ut at est nulla. </p>
+          <button type="button" class="btn btn-dark btn-lg download_button"><i class="fab fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download_button"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+
+
+      </div>
+
+</div>
+
+
+
+<!--Footer-->
+
+<footer class="page-footer ">
+
+
+        <div class="col-md-4 mt-md-0 mt-3">
+
+          <p style="margin-top:30px; font-size:12px;">70 Brown St. <br>South Windsor, CT 06074 </p>
+
+        </div>
+
+        <div class="col-md-4 mb-md-0 mb-3">
+
+          <img style="position:absolute; " src="images/logo.png" >
+          <p style="position:absolute; margin-left:320px; margin-top:30px;" >FLUIDRA DESIGN</p>
+
+        </div>
+
+        <div class="col-md-4 mb-md-0 mb-3">
+
+          <div class="footer-copyright text-right py-3" style= "margin-top:30px; font-size:12px;">© 2017 FLUIDRA. All Rights Reserved.
+        </div>
+
+        </div>
+
+
+
+</footer>
+
+
+<script>
+  function DisplayText(selected) {
+    if (selected == first)  {
+    document.getElementById("ShowText").innerHTML = "Lorem ipsm Donec vestibulum at augue venenatis aliquam";
   }
-  .see-more-btn:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-.right-side{
-  margin-left:820px;
-  position:absolute;
-}
-.middle-body-part{
-  width:100%;
-  text-align:center;
-  margin-top:200px;
-  position:relative;
-}
-.txt-btn{
-  width:20%;
-  padding:40px 32px;
-  border:0px;
-  color: black;
-  background-color: white;
-    cursor: pointer;
-    text-decoration: none;
-    transition: 0.3s;
-    opacity: 1;
+  else if (selected == second)  {
+    document.getElementById("ShowText").innerHTML = "lacinia nec placerat libero ap orttitor. Donec dapibus pulvinar";
 
+  }
+  else{
+    document.getElementById("ShowText").innerHTML = "Proin bibendum placerat libero ap orttitor posuere. Ut at est nulla.";
 
+  }
 
-}
-.txt-btn:hover {
+  }
+</script>
 
-  box-shadow: 0 12px 16px 0 rgba(171, 235, 198,0.24), 0 17px 50px 0 rgba(171, 235, 198,0.19);
-}
-/*blog section*/
-.blog-img{
-position:absolute;
-margin-top:120px;
-margin-left:270px;
-width:40%;
-}
-.small-bx{
-  position:absolute;
-  margin-top:120px;
-  margin-left:350px;
-color:white;
-font-size:20px;
-background-color:green;
-padding:15px 30px;
-}
-a{
-  color:blue;
-}
-.blog-list1{
-  margin-top:120px;
-  margin-left:900px;
-position:absolute;
-}
-.blog-list2{
-  margin-top:250px;
-  margin-left:900px;
-position:absolute;
-}
-.blog-list3{
-  margin-top:375px;
-  margin-left:900px;
-position:absolute;
-}
-li{
-  list-style-type:none;
-}
+<!--drop down menu JS close and open menu on click-->
+<script type="text/javascript">
+var button = document.getElementById('dropdown-menu'),
+  span = button.getElementsByTagName('span')[0];
 
-.last-row{
-  margin-top:660px;
-}
-.last-row-image{
-  margin-left:250px;
+button.onclick =  function() {
+span.classList.toggle('dropdown-menu-button-close');
+};
+
+$('#dropdown-menu').on('click', toggleOnClass);
+
+function toggleOnClass(event) {
+var toggleElementId = '#' + $(this).data('toggle'),
+element = $(toggleElementId);
+
+element.toggleClass('on');
 
 }
 
-.right-txt{
-  margin-top:150px;
-  position:absolute;
-  margin-left:690px;
-}
-/* Download Button */
+// close dropdown menu
+$( '.menu li a' ).on("click", function(){
+$('#dropdown-menu').click();
+});
 
-.download_button{
-  margin: 5% 3% 5% 0;
 
-}
-.img-phone{
-  position:absolute;
-}
-
-.page-footer{
-  background-color: #34495E;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
-
-}
+</script>
+  </body>
+</html>
