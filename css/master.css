@@ -59,7 +59,7 @@
   -webkit-transform: translateY(6px) rotate(-45deg);
           transform: translateY(6px) rotate(-45deg);
 }
-.ham-menu {
+.drop-menu {
 
   position: absolute;
   top: 42px;
@@ -68,29 +68,29 @@
   max-width: 570px;
   overflow: hidden;
 }
-.ham-menu ul {
+.drop-menu ul {
   -webkit-transform: translateX(110%);
           transform: translateX(110%);
   background-color: green;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.ham-menu.on ul {
+.drop-menu.on ul {
 
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
 }
-.ham-menu ul {
+.drop-menu ul {
   font-size: 0;
 }
-.ham-menu ul li {
+.drop-menu ul li {
   display: inline-block;
 }
-.ham-menu ul li:first-child .ham-menu ul li a {
+.drop-menu ul li:first-child .drop-menu ul li a {
   padding-left: 30px;
 
 }
-.ham-menu ul li a {
+.drop-menu ul li a {
   padding: 15px;
   display: block;
   background-color: transparent;
